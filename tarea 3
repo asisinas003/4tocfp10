@@ -1,0 +1,229 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled15.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMW4QnN4PRPkYqrgoHKztPP",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/asisinas003/4tocfp10/blob/main/tarea%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "H1SZe61cXBxs"
+      },
+      "outputs": [],
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Ejercicio 1:\n",
+        "Haz que un usuario introduzca un numero real y evalua si dicho numero es posivito, negativo o cero. Devuelve por pantalla el resultado en cada caso"
+      ],
+      "metadata": {
+        "id": "CD5pw4zrZKYb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#pedimos un numero real\n",
+        "nro = float(input(\"ingrese un numero real \"))\n",
+        "if nro > 0:\n",
+        "  print(\"el numero ingresado es positivo\")\n",
+        "elif nro < 0:\n",
+        "  print(\"el numero ingresado es negativo\")\n",
+        "else:\n",
+        "  print (\"el numero es 0\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8oihs7vCZuva",
+        "outputId": "1a136e19-7c41-4663-f6d1-c826387fd3a7"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ingrese un numero real -5\n",
+            "el numero ingresado es negativo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bwEOmXoZaUkj",
+        "outputId": "42b7a58d-448f-4ca3-adc5-ca520ac9bddf"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "44.0"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "type(nro)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9RhgMIlma3Qb",
+        "outputId": "060e0bed-4ac8-4823-fb58-5f4a70acc49c"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "float"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "_HC0tGSafkpa"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Ejercicio 2\n",
+        "haz que un usuario indroduzca su nombre y evalua con operadores if y else si dicho nombre tiene una longitud mayor a 10 caracteres o no. Devuelve por pantalla el resueltado en cada caso."
+      ],
+      "metadata": {
+        "id": "Kmg3XA9gfp4L"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nombre = input(\"cual es tu nombre\")\n",
+        "if (len(nombre)>10):\n",
+        "  print(\"su nombre tiene una longitud de 10 caracteres\")\n",
+        "else:\n",
+        "  print(\"su nombre no tiene una longitud de 10 caracteres\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3EVtdXWjgRad",
+        "outputId": "55021cc9-e8f7-4030-8cf4-31ce54c289a4"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "cual es tu nombre juan\n",
+            "su nombre no tiene una longitud de 10 caracteres\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ejercicio 3 \n",
+        "Realizar el ejercicio anterior con el uso del operador ternario."
+      ],
+      "metadata": {
+        "id": "tV8zVaMXkoal"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "V3Ymhrs_kVKc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nombre = input(\"cual es tu nombre\")\n",
+        "if (len(nombre)>20):\n",
+        "  print(\"su nombre tiene una longitud de 20 caracteres\")\n",
+        "else:\n",
+        "  print(\"su nombre no tiene una longitus de 20 caracteres\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "K8j5e1oClikm",
+        "outputId": "2b40af52-2de6-4f14-be14-40e66c936ae3"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "cual es tu nombre san\n",
+            "su nombre no tiene una longitus de 5 caracteres\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
