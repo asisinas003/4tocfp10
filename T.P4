@@ -1,0 +1,541 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "T.P4",
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyNzipYuc49uz9VpQPYgsRdW",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/asisinas003/4tocfp10/blob/main/T.P4\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ejercicio 1\n",
+        "Haz que un usuario introduzca un numeros entero por teclado. Mientras el usuario no introduzca el 0, muestra si el numero introducidoes par o impar."
+      ],
+      "metadata": {
+        "id": "g1-KZau9f8m0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"por favor introduzca un numero entero: \"))\n",
+        "\n",
+        "while n !=0:\n",
+        "  print(\"El numero {} es {} \" .format(n, \"par\" if n % 2 == 0 else \"impar\"))\n",
+        "  n = int(input(\"por favor introduzca un numero entero: \"))\n",
+        "\n",
+        "  print(\"haz salido del bucle\")"
+      ],
+      "metadata": {
+        "id": "9rGj-OOEgj7F",
+        "outputId": "376a0e0f-0a57-42f4-9cec-5b6cd54c2935",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "por favor introduzca un numero entero: 4\n",
+            "El numero 4 es par \n",
+            "por favor introduzca un numero entero: 3\n",
+            "haz salido del bucle\n",
+            "El numero 3 es impar \n",
+            "por favor introduzca un numero entero: 0\n",
+            "haz salido del bucle\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ejercicio 2\n",
+        "Haz que un usuario introduzca una palabra y una letra por teclado. Comprueba si la pallabra contiene la letra o no indicaselo al usuario por pantalla"
+      ],
+      "metadata": {
+        "id": "0XiVDW4Dhkgr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "letter = input(\"introduzca una letra: \")\n",
+        "word = input(\"introduzca una palabra: \")\n",
+        "i=0\n",
+        "found = False\n",
+        "while i < len(word):\n",
+        "  if word[i] == letter:\n",
+        "    found = True \n",
+        "    break\n",
+        "  i+= 1\n",
+        "print(\"la palabra {} {} contiene la letra {}\".format(word, \"si\" if found else \"no\", letter))\n",
+        "\n",
+        " "
+      ],
+      "metadata": {
+        "id": "BCoUI5Tilpsy",
+        "outputId": "98f13be6-c7d0-4d30-abfd-0705a912b0c7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "introduzca una letra: c\n",
+            "introduzca una palabra: cena\n",
+            "la palabra cena si contiene la letra c\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Ejercicio 3\n",
+        "Haz que el usuario introduzca precios por teclado (si introduce 0, entonces es que ha finalizado). Si el usuario\n",
+        "\n",
+        "pasa de 200€, entonces ya no debe poder introducir más precios pues se ha pasado de presupuesto. Sea cual\n",
+        "\n",
+        "sea el resultado (o bien el precio final o bien que no tiene más presupuesto), indicaselo por pantalla al usuario."
+      ],
+      "metadata": {
+        "id": "FgWGpNf-aztZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = float(input(\"por favor ponete un precio: \"))\n",
+        "total = n\n",
+        "while n !=0:\n",
+        "  if total>=200:\n",
+        "    break\n",
+        "  n = float(input(\"por favor ponete un precio: \"))\n",
+        "  total += n\n",
+        "if total > 200:\n",
+        "  print(\"pasaste de presupuesto\")\n",
+        "else:\n",
+        "  print(\"el total asciente a \", total)"
+      ],
+      "metadata": {
+        "id": "BFZwkdLTa_V0",
+        "outputId": "272e4adb-513d-4fea-8afc-d002e26f35ab",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "por favor ponete un precio: 50\n",
+            "por favor ponete un precio: 100\n",
+            "por favor ponete un precio: 20\n",
+            "por favor ponete un precio: 80\n",
+            "pasaste de presupuesto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#ejercicio 4\n",
+        "Haz que el usuario introduzca numeros enteros por teclado. Mientras el usuario no introduzca el 0, calcula cuantos numeros positivos y cuantos negativos ha introducido y muestraselo al final"
+      ],
+      "metadata": {
+        "id": "sBPpgkMziKo8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "number = int(input(\"por favor introduce un numero entero: \"))\n",
+        "\n",
+        "npos = 0\n",
+        "total = 0\n",
+        "while number != 0:\n",
+        "  if number >0:\n",
+        "    npos +1\n",
+        "  total +1\n",
+        "\n",
+        "  number= int(input(\"por favor introduzca un numero entero: \"))\n",
+        "\n",
+        "print(\"de los {} numeros introducidos, {} sonpositivos y {} son negativos\". format(total, npos, total-npos))"
+      ],
+      "metadata": {
+        "id": "vgSvrjXQeIh-"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"ingrese la cantidad de datos que desea procesar: \"))\n",
+        "\n",
+        "if n > 0:\n",
+        "\n",
+        "    positivos = 0\n",
+        "    negativos = 0\n",
+        "    \n",
+        "\n",
+        "    for i in range(n):\n",
+        "        dato = int(input(\"ingrese un numero entero: \"))\n",
+        "\n",
+        "        if dato > 0:\n",
+        "           positivos += 1\n",
+        "\n",
+        "        else:\n",
+        "            negativos += 1\n",
+        "\n",
+        "       \n",
+        "    print(\"La cantidad de numero positivos fue:\",positivos,\"\\nLa cantidad de numero negativos fue:\",negativos)\n",
+        "\n",
+        "else:\n",
+        "  print(\"El numero ingresado no es correcto. Intentelo nuevamente.\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0y-IAL_9i97Y",
+        "outputId": "dad0175c-5a08-43c9-bd7d-2406a381d1a6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ingrese la cantidad de datos que desea procesar: 5\n",
+            "ingrese un numero entero: 3\n",
+            "ingrese un numero entero: 5\n",
+            "ingrese un numero entero: 1\n",
+            "ingrese un numero entero: 4\n",
+            "ingrese un numero entero: 5\n",
+            "La cantidad de numero positivos fue: 5 \n",
+            "La cantidad de numero negativos fue: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ejercicio 5\n",
+        "Haz que el usuario introduzca numeros por teclado. Mientras el usuario no introduce el 0, pidele otro numero. Cuando el usuario introduzca el 0, muestrale la media aritmetica de los numeros que ha introducido."
+      ],
+      "metadata": {
+        "id": "53WMhNftJCGA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"manda un numero entero bich: \") \n",
+        "number = int(input(\"\"))\n",
+        "\n",
+        "mean = 0\n",
+        "\n",
+        "total = 0\n",
+        "\n",
+        "while number != 0:\n",
+        "\n",
+        "  total +=1\n",
+        "\n",
+        "mean =(mean + (total -1)+ number)/ total\n",
+        "\n",
+        "number = int(input())\n",
+        "\n",
+        "print (\"la media aritmetica de los numeros que has introducido es \", mean)"
+      ],
+      "metadata": {
+        "id": "39WuDd4jhQww"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ejercicio 6\n",
+        "Haz que el usuario introduzca dos numeros enteros por teclado. El primero sera el extremo izquierdo del intervalo y, el segundo, el extremo derecho. Imprime todos los numeros que se encuentren entre los dos numeros introducidos por el usuario.(los extremos incluidos)."
+      ],
+      "metadata": {
+        "id": "cL5ArsQaMOQs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"por favor introduce un numero entero: \"))\n",
+        "n2 = int(input(\"por favor introduce un numero entero: \"))\n",
+        "for i in range(n1, n2 +1):\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "id": "XCB2Qaj9h9Kl",
+        "outputId": "e9dafd48-7863-44b0-afdf-b45402525531",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "por favor introduce un numero entero: 2\n",
+            "por favor introduce un numero entero: 4\n",
+            "2\n",
+            "3\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ejercicio 7\n",
+        "Haz que el usuario introduzca dos numeros por teclado. El primero sera el extremo izquierdo del intervaloy,el segundo,el extremo derecho. Imprime la suma de todos los multiplos de 3 que se encuentren entre los dos  numeros introducidos por el usuario(los entremos incluidos).finalmente,muestra por pantalla el resultado de la suma.\n"
+      ],
+      "metadata": {
+        "id": "V7LjmCb0brsG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"itroduce un numero: \"))\n",
+        "n2 = int(input(\"introduce un numero: \"))\n",
+        "sum=0\n",
+        "for i in range(n1,n2+1):\n",
+        "  if i%3 !=0:\n",
+        "    continue\n",
+        "  sum += i\n",
+        "  print(\"la suma asciente a\" ,sum) "
+      ],
+      "metadata": {
+        "id": "SNfgVupINxA-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "999e19c2-630f-439a-e5dd-26a76a2c07a0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "itroduce un numero: 2\n",
+            "introduce un numero: 3\n",
+            "la suma asciente a 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#Ejercicio 8\n",
+        "Pidele al usuario cuantos numero vas a introducir. con un bucle for, solicitale esa cantidad de numeros y calcula su producto."
+      ],
+      "metadata": {
+        "id": "e803WSTVr9xd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c = int(input(\"Cantidad de numeros: \"))\n",
+        "total=0\n",
+        "for variable in range(c):\n",
+        "  numero = int(input(\"numero: \"))\n",
+        "  total+=numero\n",
+        "print(\"total de la suma:\", total)\n"
+      ],
+      "metadata": {
+        "id": "2qEkutSiuCx8",
+        "outputId": "952a075f-a86d-452d-fd75-910287cbdafe",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cantidad de numeros: 5\n",
+            "numero: 4\n",
+            "numero: 3\n",
+            "numero: 2\n",
+            "numero: 1\n",
+            "numero: 5\n",
+            "total de la suma: 15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Ejercicio 9\n",
+        "Haz que el usuario introduzca su edad y el año actual. Imprime todos los años que han pasado desde su año de nacimiento hasta el año actual (ambos incluidos)"
+      ],
+      "metadata": {
+        "id": "ovlC9NKQjnvN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "age = int(input(\"Ingrese su edad\\n\")) \n",
+        "currentyear = int(input(\"Ingrese el año actual\\n\"))\n",
+        "\n",
+        "birthyear = currentyear-age\n",
+        "\n",
+        "print(\"han psaado \" + str(currentyear-birthyear)\n",
+        "\n",
+        "+ \" años\\n\")\n",
+        "\n",
+        "for i in range(birthyear, currentyear+1): print(i)"
+      ],
+      "metadata": {
+        "id": "OWWi1hfFjwRT",
+        "outputId": "b4500cd4-eb4c-4fcb-d588-a6457e5d36cd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ingrese su edad\n",
+            "18\n",
+            "Ingrese el año actual\n",
+            "2022\n",
+            "han psaado 18 años\n",
+            "\n",
+            "2004\n",
+            "2005\n",
+            "2006\n",
+            "2007\n",
+            "2008\n",
+            "2009\n",
+            "2010\n",
+            "2011\n",
+            "2012\n",
+            "2013\n",
+            "2014\n",
+            "2015\n",
+            "2016\n",
+            "2017\n",
+            "2018\n",
+            "2019\n",
+            "2020\n",
+            "2021\n",
+            "2022\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Ejercicio 10\n",
+        "Haz que el usuario introduzca un número entero. Muestra un cuadrado y luego un triángulo rectángulo de lado y altura, respectivamente, el número entero introducido. Por ejemplo, si el usuario introduce como número 5, se deberá mostrar:"
+      ],
+      "metadata": {
+        "id": "ZY7W5Eb2ZWXQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input(\"por favor ingrese una altura para el triangulo: \"))\n",
+        "for i in range(1,n+1): \n",
+        "    for j in range(1,i+1):\n",
+        "      print(j, end=\"\")\n",
+        "    print(\"\") "
+      ],
+      "metadata": {
+        "id": "NTVKbm-eyM2z",
+        "outputId": "9c65857b-3a68-4aa3-bbfb-e5653126f983",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "por favor ingrese una altura para el triangulo: 7\n",
+            "1\n",
+            "12\n",
+            "123\n",
+            "1234\n",
+            "12345\n",
+            "123456\n",
+            "1234567\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "LkZP4GGU0zgo"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
